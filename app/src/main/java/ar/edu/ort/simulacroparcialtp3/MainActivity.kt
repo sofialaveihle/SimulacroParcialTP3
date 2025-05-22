@@ -12,7 +12,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import ar.edu.ort.simulacroparcialtp3.screens.CoffeeDetail
+import ar.edu.ort.simulacroparcialtp3.screens.Home
+import ar.edu.ort.simulacroparcialtp3.screens.Screens
+import ar.edu.ort.simulacroparcialtp3.screens.Welcome
 import ar.edu.ort.simulacroparcialtp3.ui.theme.SimulacroParcialTP3Theme
 
 class MainActivity : ComponentActivity() {
@@ -27,9 +32,11 @@ class MainActivity : ComponentActivity() {
                     NavHost(
                         modifier = Modifier.padding(innerPadding),
                         navController = navController,
-                        startDestination = "home"
+                        startDestination = Screens.Welcome.screen
                     ) {
-
+                        composable(Screens.Welcome.screen) { Welcome(navController) }
+                        composable(Screens.Home.screen) { Home(navController) }
+                        composable(Screens.CoffeeDetail.screen) { CoffeeDetail(navController) }
                     }
                 }
             }

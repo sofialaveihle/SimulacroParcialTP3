@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SimulacroParcialTP3</string>
+
+<!--    Welcome Page-->
+    <string name="welcome_title" translatable="false">Fall in Love with Coffee in Blissful Delight!</string>
+    <string name="welcome_subtitle" translatable="false">Welcome to our cozy coffee corner, where every cup is a delightful for you.</string>
+    <string name="welcome_button_text" translatable="false">Get Started</string>
 </resources>
